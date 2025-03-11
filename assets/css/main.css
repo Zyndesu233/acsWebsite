@@ -1,0 +1,216 @@
+:root {
+    --acs-yellow: #FFCB4F;
+    --acs-grey: #F1F1F1;
+    --acs-blue: #2D56BD;
+    --acs-purple: #514DA9;
+    --acs-black: #212121;
+}
+
+* {
+    box-sizing: border-box;
+
+    font-family: "Noto Sans HK", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+    /* the use of scroll-behavior src: https://developer.mozilla.org/fr/docs/Web/CSS/scroll-behavior */
+    scroll-behavior: smooth;
+}
+
+body {
+    position: absolute;
+    margin: 0;
+    inset: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+#main-wrapper {
+    display: flex;
+}
+
+.section-title {
+    font-size: 36px;
+    color: var(--acs-purple);
+    padding-bottom: 10px;
+}
+
+#nav {
+    top: 0;
+    width: 16.6%;
+    min-width: 200px;
+    height: 100vh;
+    background-color: var(--acs-purple);
+    inset: 0;
+    position: sticky;
+    align-self: flex-start;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+
+    &>#nav-icon {
+        width: 80%
+    }
+
+    #nav-items {
+        min-width: 73%;
+
+    }
+
+    .nav-item, .nav-link {
+        color: white;
+        display: block;
+        text-align: center;
+
+        /* background color animation src: https://stackoverflow.com/questions/17212094/fill-background-color-left-to-right-css */
+        background: linear-gradient(to left, var(--acs-purple) 50%, var(--acs-yellow) 50%) right;
+        background-size: 200%;
+        transition: .2s ease-out;
+    }
+
+    .nav-item:hover, .nav-link:hover {
+        background-position: left;
+    }
+
+    .nav-item {
+        font-size: 24px;
+    }
+
+    .nav-link {
+        font-size: 18px;
+    }
+}
+
+/* hide nav when using smartphone or pad */
+@media screen and (max-width: 1024px) {
+    #nav {
+        display: none !important;
+    }
+}
+
+#main-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+    img {
+        width: 50%;
+    }
+}
+
+#activities {
+    padding-top: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+
+    &>.event-container {
+        display: flex;
+        padding: 1rem;
+
+        img {
+            width: 25%;
+        }
+
+        &>.event-description {
+            padding: 2rem;
+            width: 75%;
+            background-color: var(--acs-grey);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            flex-wrap: nowrap;
+
+            &>.event-title{
+                font-size: 45px;
+                color: var(--acs-purple);
+            }
+
+            &>.event-detail {
+                font-size: 25px;
+                color: var(--acs-black);
+
+            }
+
+            /* the use of :has src: https://stackoverflow.com/questions/77331185/css-has-hover-selector */
+            .event-title:hover, .event-title:has(+.event-detail:hover) {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+#articles {
+    padding-top: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+
+    &>#bookshelf {
+        gap: 1rem;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        &>.book-container {
+            width: 20%;
+
+            display: flex;
+            flex-direction: column;
+
+            &>.book-img-container {
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    transition: all .3s ease;
+    
+                }
+
+                img:hover {
+                    transform: scale(1.2);
+                    transform-origin: center;
+                }
+            }
+
+
+            &>.book-detail {
+                padding: .5rem;
+                font-size: 20px;
+                color: var(--acs-purple);
+                background-color: var(--acs-grey);
+                
+                
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+    }
+}
+
+#about {
+    padding-top: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+
+    &>#member-description {
+        padding: 1rem;
+        iframe {
+            width: 100%;
+            height: 80vh;
+        }
+    }
+}
