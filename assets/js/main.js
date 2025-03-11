@@ -1,4 +1,5 @@
 let activities = document.getElementById("activities");
+let monthShelf = document.getElementById("monthly-shelf");
 let bookshelf = document.getElementById("bookshelf");
 
 function genActivities() {
@@ -13,7 +14,21 @@ function genActivities() {
     }
 }
 
+function genMonthly() {
+    // post = [img, ig], start from feb, sorted
+    const posts = [
+        ["https://imgur.com/nYKSNnS.png", "https://www.instagram.com/p/DGHbxdlz2F5/"],
+        ["https://imgur.com/FhrekHp.png", ""],
+        ["https://imgur.com/NmQZ4gI.png", ""]
+    ];
+
+    for(let i=0; i<posts.length; i++) {
+        monthShelf.innerHTML += "<a class='monthly' href='"+posts[i][1]+"' target='_blank'><img src='"+posts[i][0]+"' /></a>";
+    }
+}
+
 function genArticles() {
+    // book = [name, img, online-bk]
     const books = [
         ["漫家燈火 一期會刊", "https://imgur.com/zDp1YgA.png", "https://heyzine.com/flip-book/c51ed606f0.html"],
         ["花火瀾漫 二期會刊", "https://imgur.com/pZq2cQO.png", "https://heyzine.com/flip-book/922188a818.html"],
@@ -32,3 +47,4 @@ function genArticles() {
 
 genActivities();
 genArticles();
+genMonthly();

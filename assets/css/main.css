@@ -155,6 +155,30 @@ a {
     padding-left: 4rem;
     padding-right: 4rem;
 
+    &>#monthly-shelf {
+        gap: 1rem;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        &>.monthly {
+            width: 30%;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                transition: all .3s ease;
+            }
+
+            img:hover {
+                transform: scale(1.135);
+                transform-origin: center;
+            }
+        }
+    }
+
     &>#bookshelf {
         gap: 1rem;
 
