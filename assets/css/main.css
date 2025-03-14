@@ -49,7 +49,8 @@ a {
     width: 16.6%;
     min-width: 200px;
     height: 100vh;
-    background-color: var(--acs-purple);
+    background-image: url("../img/starsky.png");
+    background-size: cover;
     inset: 0;
     position: sticky;
     align-self: flex-start;
@@ -76,9 +77,14 @@ a {
         text-align: center;
 
         /* background color animation src: https://stackoverflow.com/questions/17212094/fill-background-color-left-to-right-css */
-        background: linear-gradient(to left, var(--acs-purple) 50%, var(--acs-yellow) 50%) right;
+        background: linear-gradient(to left, rgba(0,0,0,0) 50%, var(--acs-yellow) 50%) right;
         background-size: 200%;
         transition: .2s ease-out;
+
+        img {
+            height: 1rem;
+            filter: brightness(0.0) invert(1);
+        }
     }
 
     .nav-item:hover, .nav-link:hover {
@@ -235,8 +241,6 @@ a {
     padding-right: 4rem;
 
     &>#member-description {
-        position: absolute;
-        inset: 0;
         height: 100%;
         display: grid;
         grid-template-columns: auto min-content;
@@ -248,10 +252,10 @@ a {
 
         #main-img-container {
             position: relative;
+            height: 90vh;
             background-color: var(--acs-blue);
     
             &>#member-main-img {
-                height: 50vh;
                 position: absolute;
                 inset: 0;
                 background-size: contain;
@@ -285,7 +289,6 @@ a {
                 &::before {
                     content: "";
                     border-radius: calc(var(--gap-size)/2);
-                    position: absolute;
                     inset: 0;
                     transition: all calc(var(--animation-duration)/2) ease;
                     border: var(--acs-yellow) 0px solid;
