@@ -1,0 +1,14 @@
+/* hide nav when using smartphone or pad */
+@media screen and (max-width: 1024px) {
+    * {
+        font-size: 10px !important;
+    }
+    
+    #nav {
+        display: none !important;
+    }
+
+    #event-detail {
+        display: none !important;
+    }
+}
