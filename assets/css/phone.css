@@ -1,14 +1,64 @@
 /* hide nav when using smartphone or pad */
 @media screen and (max-width: 1024px) {
     * {
-        font-size: 10px !important;
+        font-size: 12px !important;
     }
     
     #nav {
         display: none !important;
     }
 
-    #event-detail {
+    #main-img-main {
+        width: 100vw !important;
+    }
+
+    #main-img-sub {
         display: none !important;
+    }
+
+    #activities {
+        padding-top: 1rem !important;
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+
+        &>.event-container {
+            padding: 0;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+
+            &>img {
+                width: 90vw !important;
+            }
+
+            &>.event-description {
+                display: none !important;
+            }
+        }
+    }
+
+    #articles {
+        padding-top: 1rem !important;
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+
+        #monthly-shelf {
+            gap: 0.5rem !important;
+        }
+
+        #bookshelf {
+            .book-detail {
+                display: none !important;
+            }
+        }
+    }
+
+    #about {
+        padding-top: 1rem !important;
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+
+        &>#member-description {
+            display: none !important;
+        }
     }
 }
