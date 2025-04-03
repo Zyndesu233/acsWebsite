@@ -18,7 +18,7 @@ function genMonthly() {
     // post = [img, ig], start from feb, sorted
     const posts = [
         ["https://imgur.com/nYKSNnS.png", "https://www.instagram.com/p/DGHbxdlz2F5/"],
-        ["https://imgur.com/FhrekHp.png", ""],
+        ["https://imgur.com/FhrekHp.png", "https://www.instagram.com/p/DH2DCxJTc7f/"],
         ["https://imgur.com/NmQZ4gI.png", ""]
     ];
 
