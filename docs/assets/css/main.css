@@ -89,6 +89,7 @@
             color: white;
             display: block;
             text-align: center;
+            border-radius: 3px;
     
             /* background color animation src: https://stackoverflow.com/questions/17212094/fill-background-color-left-to-right-css */
             background: linear-gradient(to left, rgba(0,0,0,0) 50%, var(--acs-yellow) 50%) right;

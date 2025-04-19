@@ -10,7 +10,6 @@
             width: 100vw;
             height: 10vh;
             flex-direction: row;
-            gap: 0;
 
             #nav-icon {
                 width: 20%;
@@ -22,7 +21,9 @@
                 justify-content: center;
 
                 .nav-item {
-                    font-size: 0.7rem;
+                    font-size: 3vw;
+                    border-radius: 3px;
+                    padding: 5px;
                 }
             }
 
