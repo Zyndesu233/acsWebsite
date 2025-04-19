@@ -1,4 +1,3 @@
-let mainImg = document.getElementById("main-img");
 let activities = document.getElementById("activities");
 let articles = document.getElementById("articles");
 let monthShelf = document.getElementById("monthly-shelf");
@@ -57,18 +56,9 @@ genMonthly();
 function scrollCheck() {
     const currentY = window.scrollY;
 
-    const mainImgHeight = mainImg.offsetHeight;
-    const mainImgTop = mainImg.offsetTop-100;
-    let mainImgNav = document.getElementById("nav-item-1");
-    if(currentY > mainImgTop && currentY <= mainImgTop+mainImgHeight) {
-        mainImgNav.classList.add("currentSection");
-    } else {
-        mainImgNav.classList.remove("currentSection");
-    }
-
     const activitiesHeight = activities.offsetHeight;
     const activitiesTop = activities.offsetTop-100;
-    let activitiesNav = document.getElementById("nav-item-2");
+    let activitiesNav = document.getElementById("nav-item-1");
     if(currentY > activitiesTop && currentY <= activitiesTop+activitiesHeight) {
         activitiesNav.classList.add("currentSection");
     } else {
@@ -77,7 +67,7 @@ function scrollCheck() {
 
     const articlesHeight = articles.offsetHeight;
     const articlesTop = articles.offsetTop-100;
-    let articlesNav = document.getElementById("nav-item-3");
+    let articlesNav = document.getElementById("nav-item-2");
     if(currentY > articlesTop && currentY <= articlesTop+articlesHeight) {
         articlesNav.classList.add("currentSection");
     } else {
@@ -86,7 +76,7 @@ function scrollCheck() {
 
     const aboutHeight = about.offsetHeight;
     const aboutTop = about.offsetTop-100;
-    let aboutNav = document.getElementById("nav-item-4");
+    let aboutNav = document.getElementById("nav-item-3");
     if(currentY > aboutTop && currentY <= aboutTop+aboutHeight) {
         aboutNav.classList.add("currentSection");
     } else {

@@ -11,17 +11,23 @@
             height: 10vh;
             flex-direction: row;
 
-            #nav-icon {
-                width: 20%;
+            #nav-icon-container {
+                width: 20vw;
+
+                display: flex;
+
+                #nav-icon {
+                    width: 100%;
+                }
             }
 
             #nav-items {
-                width: 50%;
+                width: 60%;
                 flex-direction: row;
                 justify-content: center;
 
                 .nav-item {
-                    font-size: 3vw;
+                    font-size: 4vw;
                     border-radius: 3px;
                     padding: 5px;
                 }

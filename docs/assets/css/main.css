@@ -73,16 +73,19 @@
             background-color: var(--acs-blue);
             opacity: 0.5;
         }
-    
-        &>#nav-icon {
-            width: 80%;
+
+        &>#nav-icon-container {
+            &>#nav-icon {
+                width: 10vw;
+            }
         }
+    
     
         #nav-items {
             width: 73%;
             display: flex;
             flex-direction: column;
-            gap: 0.8em;
+            gap: 1rem;
         }
     
         .nav-item, .nav-link {
