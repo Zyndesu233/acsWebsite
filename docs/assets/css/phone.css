@@ -1,73 +1,105 @@
-/* hide nav when using smartphone or pad */
-@media screen and (max-width: 1024px) {
+@layer phone {
     * {
-        font-size: 40px !important;
+        font-size: 40px;
     }
+
+    #main-wrapper {
+        display: block;
+        
+        #nav {
+            width: 100vw;
+            height: 10vh;
+            flex-direction: row;
+            gap: 0;
+
+            #nav-icon {
+                width: 20%;
+            }
+
+            #nav-items {
+                width: 50%;
+                flex-direction: row;
+                justify-content: center;
+
+                .nav-item {
+                    font-size: 0.7rem;
+                }
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    }
+
+    #main-img {
+        #main-img-default {
+            display: none;
+        }
     
-    #nav {
-        display: none !important;
+        #main-img-phone {
+            display: block;
+            width: 100vw;
+        }
     }
 
-    #main-img-main {
-        width: 100vw !important;
-    }
-
-    #main-img-sub {
-        display: none !important;
-    }
 
     #activities {
-        padding-top: 1rem !important;
-        padding-left: 0.5rem !important;
-        padding-right: 0.5rem !important;
+        padding-top: 1rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
 
         &>.event-container {
-            display: block !important;
+            display: block;
             padding: 0;
             padding-bottom: 0.5rem;
 
             &>img {
-                width: 90vw !important;
+                width: 90vw;
             }
 
             &>.event-description {
-                display: none !important;
+                display: none;
             }
         }
     }
 
     #articles {
-        padding-top: 1rem !important;
-        padding-left: 0.5rem !important;
-        padding-right: 0.5rem !important;
+        padding-top: 1rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
 
         #monthly-shelf {
-            gap: 1rem !important;
-            display: block !important;
+            gap: 1rem;
+            display: block;
 
             img:hover {
-                transform: none !important;
+                transform: none;
             }
         }
 
         #bookshelf {
-            .book-detail {
-                display: none !important;
+            .book-container {
+                width: 40vh;
+
+                img:hover {
+                    transform: none;
+                }
+
+                .book-detail {
+                    display: none;
+                }
             }
         }
     }
 
     #about {
-        padding-top: 1rem !important;
-        padding-left: 0.5rem !important;
-        padding-right: 0.5rem !important;
+        padding-top: 1rem ;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
 
         &>#member-description {
-            display: none !important;
+            display: none;
         }
     }
-}
-
-footer {
-    font-size: 10px !important;
 }

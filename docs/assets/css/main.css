@@ -10,326 +10,328 @@
     --gap-size: 0.75vw;
 }
 
-* {
-    box-sizing: border-box;
-
-    font-family: "Noto Sans HK", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-
-    font-size: 14px;
-}
-
-html {
-    /* the use of scroll-behavior src: https://developer.mozilla.org/fr/docs/Web/CSS/scroll-behavior */
-    scroll-behavior: smooth;
-}
-
-body {
-    position: absolute;
-    margin: 0;
-    inset: 0;
-}
-
-a {
-    text-decoration: none;
-}
-
-#main-wrapper {
-    display: flex;
-}
-
-.section-title {
-    font-size: 3rem;
-    color: var(--acs-purple);
-    padding-bottom: 10px;
-}
-
-#nav {
-    top: 0;
-    width: 16.6%;
-    min-width: 200px;
-    height: 100vh;
-    background-image: url("../img/starsky.png");
-    background-size: cover;
-    inset: 0;
-    position: sticky;
-    align-self: flex-start;
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-    align-items: center;
-    justify-content: space-around;
-
-    &::before {
-        content: "";
+@layer default{
+    * {
+        box-sizing: border-box;
+    
+        font-family: "Noto Sans HK", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    
+        font-size: 14px;
+    }
+    
+    html {
+        /* the use of scroll-behavior src: https://developer.mozilla.org/fr/docs/Web/CSS/scroll-behavior */
+        scroll-behavior: smooth;
+    }
+    
+    body {
         position: absolute;
-        z-index: -1;
+        margin: 0;
         inset: 0;
-        background-color: var(--acs-blue);
-        opacity: 0.5;
     }
-
-    &>#nav-icon {
-        width: 80%;
+    
+    a {
+        text-decoration: none;
     }
-
-    #nav-items {
-        width: 73%;
+    
+    #main-wrapper {
+        display: flex;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+        color: var(--acs-purple);
+        padding-bottom: 10px;
+    }
+    
+    #nav {
+        top: 0;
+        width: 16.6%;
+        min-width: 200px;
+        height: 100vh;
+        background-image: url("../img/starsky.png");
+        background-size: cover;
+        inset: 0;
+        position: sticky;
+        align-self: flex-start;
+    
         display: flex;
         flex-direction: column;
-        gap: 0.8em;
-    }
-
-    .nav-item, .nav-link {
-        color: white;
-        display: block;
-        text-align: center;
-
-        /* background color animation src: https://stackoverflow.com/questions/17212094/fill-background-color-left-to-right-css */
-        background: linear-gradient(to left, rgba(0,0,0,0) 50%, var(--acs-yellow) 50%) right;
-        background-size: 200%;
-        transition: .2s ease-out;
-
-        img {
-            height: 1rem;
-            filter: brightness(0.0) invert(1);
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        justify-content: space-around;
+    
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            inset: 0;
+            background-color: var(--acs-blue);
+            opacity: 0.5;
         }
-    }
-
-    .nav-item.currentSection {
-        background-position: left;
-    }
-
-    .nav-item:hover, .nav-link:hover {
-        background-position: left;
-    }
-
-    .nav-item {
-        font-size: 24px;
-    }
-
-    .nav-link {
-        font-size: 18px;
-    }
-}
-
-#main-img {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-
-    img {
-        width: 50%;
-    }
-}
-
-#activities {
-    padding-top: 2rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
-
-    &>.event-container {
-        display: flex;
-        padding: 1rem;
-
-        img {
-            width: 25%;
+    
+        &>#nav-icon {
+            width: 80%;
         }
-
-        &>.event-description {
-            padding: 2rem;
-            width: 75%;
-            background-color: var(--acs-grey);
-
+    
+        #nav-items {
+            width: 73%;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
-            flex-wrap: nowrap;
-
-            &>.event-title{
-                font-size: 2.5rem;
-                color: var(--acs-purple);
-            }
-
-            &>.event-detail {
-                font-size: 1.5rem;
-                color: var(--acs-black);
-
-            }
-
-            /* the use of :has src: https://stackoverflow.com/questions/77331185/css-has-hover-selector */
-            .event-title:hover, .event-title:has(+.event-detail:hover) {
-                text-decoration: underline;
-            }
+            gap: 0.8em;
         }
-    }
-}
-
-#articles {
-    padding-top: 2rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
-
-    &>#monthly-shelf {
-        gap: 1rem;
-        padding-bottom: 2rem;
-
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-
-        &>.monthly {
-            width: 30%;
-            overflow: hidden;
-
+    
+        .nav-item, .nav-link {
+            color: white;
+            display: block;
+            text-align: center;
+    
+            /* background color animation src: https://stackoverflow.com/questions/17212094/fill-background-color-left-to-right-css */
+            background: linear-gradient(to left, rgba(0,0,0,0) 50%, var(--acs-yellow) 50%) right;
+            background-size: 200%;
+            transition: .2s ease-out;
+    
             img {
-                width: 100%;
-                transition: all .3s ease;
-            }
-
-            img:hover {
-                transform: scale(1.135);
-                transform-origin: center;
+                height: 1rem;
+                filter: brightness(0.0) invert(1);
             }
         }
+    
+        .nav-item.currentSection {
+            background-position: left;
+        }
+    
+        .nav-item:hover, .nav-link:hover {
+            background-position: left;
+        }
+    
+        .nav-item {
+            font-size: 24px;
+        }
+    
+        .nav-link {
+            font-size: 18px;
+        }
     }
-
-    &>#bookshelf {
-        gap: 1rem;
-
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-
-        &>.book-container {
-            width: 20%;
-
+    
+    #main-img {
+        #main-img-default {
+            width: 100%
+        }
+    
+        #main-img-phone {
+            display: none;
+        }
+    }
+    
+    #activities {
+        padding-top: 2rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    
+        &>.event-container {
             display: flex;
-            flex-direction: column;
-
-            &>.book-img-container {
-                overflow: hidden;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    transition: all .3s ease;
+            padding: 1rem;
+    
+            img {
+                width: 25%;
+            }
+    
+            &>.event-description {
+                padding: 2rem;
+                width: 75%;
+                background-color: var(--acs-grey);
+    
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                flex-wrap: nowrap;
+    
+                &>.event-title{
+                    font-size: 2.5rem;
+                    color: var(--acs-purple);
+                }
+    
+                &>.event-detail {
+                    font-size: 1.5rem;
+                    color: var(--acs-black);
     
                 }
-
+    
+                /* the use of :has src: https://stackoverflow.com/questions/77331185/css-has-hover-selector */
+                .event-title:hover, .event-title:has(+.event-detail:hover) {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    
+    #articles {
+        padding-top: 2rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    
+        &>#monthly-shelf {
+            gap: 1rem;
+            padding-bottom: 2rem;
+    
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+    
+            &>.monthly {
+                width: 30%;
+                overflow: hidden;
+    
+                img {
+                    width: 100%;
+                    transition: all .3s ease;
+                }
+    
                 img:hover {
-                    transform: scale(1.2);
+                    transform: scale(1.135);
                     transform-origin: center;
                 }
             }
-
-
-            &>.book-detail {
-                padding: .5rem;
-                font-size: 20px;
-                color: var(--acs-purple);
-                background-color: var(--acs-grey);
-                
-                
+        }
+    
+        &>#bookshelf {
+            gap: 1rem;
+    
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+    
+            &>.book-container {
+                width: 20%;
+    
                 display: flex;
-                justify-content: center;
-            }
-        }
-
-    }
-}
-
-#about {
-    padding-top: 2rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
-
-    &>#member-description {
-        height: 100%;
-        width: 79%;
-        justify-self: center;
-        display: grid;
-        grid-template-columns: auto min-content;
-        overflow: hidden;
-
-        &>* {
-            padding: var(--gap-size);
-        }
-
-        #main-img-container {
-            position: relative;
-            height: 90vh;
-            background-color: var(--acs-grey);
+                flex-direction: column;
     
-            &>#member-main-img {
-                position: absolute;
-                inset: 0;
-                background-size: contain;
-                background-position: center;
-                background-repeat: no-repeat;
-                transition: transform var(--animation-duration) ease, opacity var(--animation-duration) ease;
+                &>.book-img-container {
+                    overflow: hidden;
     
-                &.animation {
-                    transform: scale(1.125);
-                    opacity: 0;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        transition: all .3s ease;
+        
+                    }
+    
+                    img:hover {
+                        transform: scale(1.2);
+                        transform-origin: center;
+                    }
+                }
+    
+    
+                &>.book-detail {
+                    padding: .5rem;
+                    font-size: 20px;
+                    color: var(--acs-purple);
+                    background-color: var(--acs-grey);
+                    
+                    
+                    display: flex;
+                    justify-content: center;
                 }
             }
+    
         }
+    }
     
-        #visual-navi {
-            gap: var(--gap-size);
+    #about {
+        padding-top: 2rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    
+        &>#member-description {
+            height: 100%;
+            width: 79%;
+            justify-self: center;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            background-color: var(--acs-grey);
+            grid-template-columns: auto min-content;
+            overflow: hidden;
     
-            &>.visual-navi-item {
+            &>* {
+                padding: var(--gap-size);
+            }
+    
+            #main-img-container {
                 position: relative;
-                aspect-ratio: 1/1;
-                background-size: contain;
-                background-position: center;
-                background-repeat: no-repeat;
-                border-radius: calc(var(--gap-size)/2);
-                transition: all calc(var(--animation-duration)/2) ease;
-                filter: brightness(.80);
-    
-                &::before {
+                height: 90vh;
+                background-color: var(--acs-grey);
+        
+                &>#member-main-img {
                     position: absolute;
                     inset: 0;
-                    content: "";
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    transition: transform var(--animation-duration) ease, opacity var(--animation-duration) ease;
+        
+                    &.animation {
+                        transform: scale(1.125);
+                        opacity: 0;
+                    }
+                }
+            }
+        
+            #visual-navi {
+                gap: var(--gap-size);
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                background-color: var(--acs-grey);
+        
+                &>.visual-navi-item {
+                    position: relative;
+                    aspect-ratio: 1/1;
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
                     border-radius: calc(var(--gap-size)/2);
                     transition: all calc(var(--animation-duration)/2) ease;
-                    border: var(--acs-yellow) 0px solid;
-                }
-    
-                &:hover {
-                    transform: scale(1.25);
-                    z-index: 1;
-                    filter: brightness(1);
-                }
-    
-                &.current {
-                    filter: brightness(1);
-    
+                    filter: brightness(.80);
+        
                     &::before {
-                        border-width: calc(var(--gap-size)/1.5);
+                        position: absolute;
+                        inset: 0;
+                        content: "";
+                        border-radius: calc(var(--gap-size)/2);
+                        transition: all calc(var(--animation-duration)/2) ease;
+                        border: var(--acs-yellow) 0px solid;
+                    }
+        
+                    &:hover {
+                        transform: scale(1.25);
+                        z-index: 1;
+                        filter: brightness(1);
+                    }
+        
+                    &.current {
+                        filter: brightness(1);
+        
+                        &::before {
+                            border-width: calc(var(--gap-size)/1.5);
+                        }
                     }
                 }
             }
         }
     }
-}
-
-footer {
-    margin-top: 5rem;
-    padding: 2.5rem;
-    background-color: var(--acs-grey);
-    display: flex;
-    justify-content: center;
+    
+    footer {
+        font-size: 10px !important;
+        margin-top: 5rem;
+        padding: 2.5rem;
+        background-color: var(--acs-grey);
+        display: flex;
+        justify-content: center;
+    }
 }
