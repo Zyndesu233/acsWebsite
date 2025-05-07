@@ -1,62 +1,64 @@
-@layer phone {
-    * {
-        font-size: 40px;
-    }
+@import "./main.css" layer(phone);
 
-    #main-wrapper {
-        display: block;
-        
-        #nav {
-            width: 100vw;
-            height: 10vh;
-            flex-direction: row;
+* {
+    font-size: 40px;
+}
 
-            #nav-icon-container {
-                width: 20vw;
+#main-wrapper {
+    display: block;
+    
+    #nav {
+        width: 100vw;
+        height: 10vh;
+        flex-direction: row;
 
-                display: flex;
+        #nav-icon-container {
+            width: 20vw;
 
-                #nav-icon {
-                    width: 100%;
-                }
-            }
+            display: flex;
 
-            #nav-items {
-                width: 60%;
-                flex-direction: row;
-                justify-content: center;
-
-                .nav-item {
-                    font-size: 4vw;
-                    border-radius: 3px;
-                    padding: 5px;
-                }
-            }
-
-            .nav-links {
-                display: none;
+            #nav-icon {
+                width: 100%;
             }
         }
-    }
 
-    #main-img {
-        #main-img-default {
+        #nav-items {
+            width: 60%;
+            flex-direction: row;
+            justify-content: center;
+
+            .nav-item {
+                font-size: 4vw;
+                border-radius: 3px;
+                padding: 5px;
+            }
+        }
+
+        .nav-links {
             display: none;
         }
-    
-        #main-img-phone {
-            display: block;
-            width: 100vw;
-        }
+    }
+}
+
+#main-img {
+    #main-img-default {
+        display: none;
     }
 
+    #main-img-phone {
+        display: block;
+        width: 100vw;
+    }
+}
 
-    #activities {
-        padding-top: 1rem;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
 
-        &>.event-container {
+#activities {
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    #activities-app {
+        .event-container {
             display: block;
             padding: 0;
             padding-bottom: 0.5rem;
@@ -70,43 +72,48 @@
             }
         }
     }
+}
 
-    #articles {
-        padding-top: 1rem;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+#articles {
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 
-        #monthly-shelf {
+    #monthly-shelf {
+        main {
             gap: 1rem;
             display: block;
-
+    
             img:hover {
                 transform: none;
             }
         }
+    }
 
-        #bookshelf {
+
+    #past-article-shelf {
+        main {
             .book-container {
                 width: 40vh;
-
+    
                 img:hover {
                     transform: none;
                 }
-
+    
                 .book-detail {
                     display: none;
                 }
             }
         }
     }
+}
 
-    #about {
-        padding-top: 1rem ;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+#about {
+    padding-top: 1rem ;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 
-        &>#member-description {
-            display: none;
-        }
+    &>#member-description {
+        display: none;
     }
 }

@@ -1,35 +1,7 @@
 let activities = document.getElementById("activities");
 let articles = document.getElementById("articles");
-let monthShelf = document.getElementById("monthly-shelf");
-let bookshelf = document.getElementById("bookshelf");
+let about = document.getElementById("about")
 
-function genActivities() {
-    const events = [
-        ["chainsaw.jpg", "鏈鋸人動畫展 – 香港", "日期：2025年1月17日至2025年3月16日<br>地點：旺角創興廣場地庫 INCUBASE Arena 新址"],
-        ["vocaloid_esstentials.jpg", "V家鑄台絕唱 II", "日期：2025年2月23日（日）<br>時間：20:00<br>地點：荃灣大會堂演奏廳"],
-        ["karaoke.png", "卡拉OK會聚", "日期：2025年2月28日（五）<br>時間：19:00 - 21:30<br>地點：本社會室（龐萬倫學生中心203室）"],
-        ["bunkasai.png", "文化祭", "日期：2025年3月28日（五）及3月31日（一）<br>時間：12:00 - 19:00<br>地點：文化廣場"],
-        ["miku_film.png", "聯校電影包場", "日期：2025年4月4日（五）<br>時間19:00<br>地點：九龍塘又一城 Festival Grand Cinema"],
-        ["maid_cafe.png", "女僕座談會", "日期：2025年4月12日（六）<br>時間15:30-17:00<br>地點：利黃瑤璧樓LT3"]
-    ];
-
-    for(let i=events.length-1; i>=0; i--) {
-        activities.innerHTML += "<div class='event-container' id='event-container-"+i+"'><img src='./assets/img/activities/"+events[i][0]+"' /><div class='event-description'><div class='event-title'>"+events[i][1]+"</div><div class='event-detail'>"+events[i][2]+"</div></div></div>";
-    }
-}
-
-function genMonthly() {
-    // post = [img, ig], start from feb, sorted
-    const posts = [
-        ["February.png", "https://www.instagram.com/p/DGHbxdlz2F5/"],
-        ["March.png", "https://www.instagram.com/p/DH2DCxJTc7f/"],
-        ["April.jpg", ""]
-    ];
-
-    for(let i=0; i<posts.length; i++) {
-        monthShelf.innerHTML += "<a class='monthly' href='"+posts[i][1]+"' target='_blank'><img src='./assets/img/monthly/"+posts[i][0]+"' /></a>";
-    }
-}
 
 function genArticles() {
     // book = [name, img, online-bk]
@@ -49,9 +21,7 @@ function genArticles() {
     }
 }
 
-genActivities();
-genArticles();
-genMonthly();
+//genArticles();
 
 function scrollCheck() {
     const currentY = window.scrollY;

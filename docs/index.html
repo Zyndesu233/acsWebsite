@@ -13,6 +13,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK&display=swap" rel="stylesheet">
+
+    <!-- Include React Library -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/babel-standalone@6/babel.js"></script>
 </head>
 
 <body>
@@ -40,7 +45,9 @@
             </div>
             <div id="activities">
                 <div class="section-title">活動</div>
-                <!-- refer to main.js genActivities -->
+                <div id="activities-app">
+                    <!-- refer to activitiesApp.js -->
+                </div>
             </div>
             <div id="articles">
                 <div class="section-title">本屆月刊</div>
@@ -48,7 +55,7 @@
                     <!-- refer to main.js genMonthly() -->
                 </div>
                 <div class="section-title">歷屆會刊</div>
-                <div id="bookshelf">
+                <div id="past-article-shelf">
                     <!-- refer to main.js genArticles -->
                 </div>
             </div>
@@ -71,5 +78,8 @@
 
 <script src="./assets/js/main.js"></script>
 <script src="./assets/js/member-description.js"></script>
+<script type="text/babel" src="./assets/js/activitiesApp.js"></script>
+<script type="text/babel" src="./assets/js/monthlyApp.js"></script>
+<script type="text/babel" src="./assets/js/pastArticleApp.js"></script>
 
 </html>
