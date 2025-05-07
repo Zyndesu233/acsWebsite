@@ -46,10 +46,10 @@ function MyApp() {
         <main>
             {pastArticleList.map((e, i) => (
                 <a className="book-container" href={e.bookLink} target="_blank" key={i}>
-                    <div class="book-img-container">
+                    <div className="book-img-container">
                         <img src={`./assets/img/past-articles/${e.imageSource}`} />
                     </div>
-                    <div class="book-detail">{e.name}</div>
+                    <div className="book-detail">{e.name}</div>
                 </a>
             ))}
         </main>

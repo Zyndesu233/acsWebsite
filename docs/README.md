@@ -1,2 +1,3 @@
 # CUHKACS30 Website
-The website can be visited at: [](www.cuhkacs30.me)
+![icon](./assets/img/cuhkacs30/acs30icon.png)
+The website can be visited through: [this link](www.cuhkacs30.me)
