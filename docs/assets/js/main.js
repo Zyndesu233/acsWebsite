@@ -14,7 +14,7 @@ function genActivities() {
     ];
 
     for(let i=events.length-1; i>=0; i--) {
-        activities.innerHTML += "<div class='event-container'><img src='./assets/img/activities/"+events[i][0]+"' /><div class='event-description'><div class='event-title'>"+events[i][1]+"</div><div class='event-detail'>"+events[i][2]+"</div></div></div>";
+        activities.innerHTML += "<div class='event-container' id='event-container-"+i+"'><img src='./assets/img/activities/"+events[i][0]+"' /><div class='event-description'><div class='event-title'>"+events[i][1]+"</div><div class='event-detail'>"+events[i][2]+"</div></div></div>";
     }
 }
 

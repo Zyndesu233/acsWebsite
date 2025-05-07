@@ -23,7 +23,6 @@
     }
     
     html {
-        /* the use of scroll-behavior src: https://developer.mozilla.org/fr/docs/Web/CSS/scroll-behavior */
         scroll-behavior: smooth;
     }
     
@@ -93,8 +92,6 @@
             display: block;
             text-align: center;
             border-radius: 3px;
-    
-            /* background color animation src: https://stackoverflow.com/questions/17212094/fill-background-color-left-to-right-css */
             background: linear-gradient(to left, rgba(0,0,0,0) 50%, var(--acs-yellow) 50%) right;
             background-size: 200%;
             transition: .2s ease-out;
@@ -163,10 +160,8 @@
                 &>.event-detail {
                     font-size: 1.5rem;
                     color: var(--acs-black);
-    
                 }
-    
-                /* the use of :has src: https://stackoverflow.com/questions/77331185/css-has-hover-selector */
+
                 .event-title:hover, .event-title:has(+.event-detail:hover) {
                     text-decoration: underline;
                 }
