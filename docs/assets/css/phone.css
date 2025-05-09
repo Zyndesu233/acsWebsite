@@ -58,6 +58,13 @@
     padding-right: 0.5rem;
 
     #activities-app {
+        .sort-function {
+            font-size: 0.5rem;
+
+            img {
+                height: 0.5rem;
+            }
+        }
         .event-container {
             display: block;
             padding: 0;

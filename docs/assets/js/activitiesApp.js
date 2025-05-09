@@ -56,8 +56,39 @@ function MyApp() {
         imageSource: "doujin_music.png"
     }]);
 
+    const[dateOrder, setDayOrder] = React.useState("descending");
+
+    const dateAscendingOrder = (o1, o2) => {
+        if(o1.date === o2.date || !o1.date || !o2.date) return 0;
+        return o1.date < o2.date? -1: 1;
+    }
+
+    const dateDescendingOrder = (o1, o2) => {
+        if(o1.date === o2.date || !o1.date || !o2.date) return 0;
+        return o1.date < o2.date? 1: -1;
+    }
+
+    function sortByDate(order) {
+        let tempEventList = [...eventList];
+        if(order==="descending") {
+            tempEventList.sort(dateDescendingOrder);
+            setDayOrder("ascending");
+        } else if(order==="ascending") {
+            tempEventList.sort(dateAscendingOrder);
+            setDayOrder("descending");
+        }
+        setEventList(tempEventList);
+    }
+
     return(
         <main>
+            <div className="title-container">
+                <div className="section-title">活動</div>
+                <div className="sort-function" onClick={()=>sortByDate(dateOrder)}>
+                    日期
+                    <img src="./assets/img/utilities/sort.svg" />
+                </div>
+            </div>
             {eventList.map((e, i) => 
                 <div className="event-container" key={i}>
                     <img src={`./assets/img/activities/${e.imageSource}`} />

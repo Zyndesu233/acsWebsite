@@ -39,6 +39,12 @@
     #main-wrapper {
         display: flex;
     }
+
+    .title-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     
     .section-title {
         font-size: 3rem;
@@ -51,7 +57,7 @@
         width: 16.6%;
         min-width: 200px;
         height: 100vh;
-        background-image: url("../img/starsky.png");
+        background-image: url("../img/utilities/starsky.png");
         background-size: cover;
         inset: 0;
         position: sticky;
@@ -135,6 +141,19 @@
         padding-right: 4rem;
 
         #activities-app {
+            .sort-function {
+                font-size: 1.5rem;
+
+                img {
+                    height: 1.5rem;
+                }
+            }
+
+            .sort-function:hover {
+                /* change to acs-yellow */
+                filter: invert(85%) sepia(76%) saturate(1704%) hue-rotate(316deg) brightness(102%) contrast(101%);
+            }
+
             .event-container {
                 display: flex;
                 padding: 1rem;
