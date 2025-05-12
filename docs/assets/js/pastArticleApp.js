@@ -12,7 +12,7 @@ function MyApp() {
         },
         {
             name: "花火瀾漫 一期會刊",
-            imageSource: "29-01.png",
+            imageSource: "28-01.png",
             bookLink: "https://heyzine.com/flip-book/12b94637ef.html"
         },
         {
