@@ -1,0 +1,71 @@
+:root {
+    --acs-yellow: #FFCB4F;
+    --acs-grey: #F1F1F1;
+    --acs-blue: #2D56BD;
+    --acs-purple: #514DA9;
+    --acs-black: #212121;
+
+    /* for member-description */
+    --animation-duration: 500ms;
+    --gap-size: 0.75vw;
+}
+
+@layer default {
+    * {
+        box-sizing: border-box;
+    
+        font-family: "Noto Sans HK", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    
+        font-size: 14px;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        position: absolute;
+        margin: 0;
+        inset: 0;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    #main-wrapper {
+        display: flex;
+    }
+
+    #character-app {
+        main {
+            display: flex;
+
+            #character-picture {
+                height: 100vh;
+                img {
+                    height: 100%;
+                }
+            }
+
+            #character-description {
+                width: 60%;
+                margin-top: 25vh;
+
+                #character-name {
+                    font-size: 4rem;  
+                    font-family: "Eagle Lake", "Noto Serif JP";
+                    font-weight: 400;
+                    font-style: normal; 
+                }
+            }
+
+            &::before {
+                
+            }
+        }
+    }
+}

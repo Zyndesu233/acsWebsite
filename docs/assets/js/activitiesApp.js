@@ -80,7 +80,7 @@ function MyApp() {
         setEventList(tempEventList);
     }
 
-    return(
+    return (
         <main>
             <div className="title-container">
                 <div className="section-title">活動</div>

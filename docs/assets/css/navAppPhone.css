@@ -1,0 +1,36 @@
+@layer phone {  
+    #nav-app {
+        width: 100vw;
+        height: 10vh;
+    
+        main {
+            flex-direction: row;
+
+            #nav-icon-container {
+                width: 20vw;
+        
+                display: flex;
+        
+                #nav-icon {
+                    width: 100%;
+                }
+            }
+        
+            #nav-items {
+                width: 60%;
+                flex-direction: row;
+                justify-content: center;
+        
+                .nav-item {
+                    font-size: 4vw;
+                    border-radius: 3px;
+                    padding: 5px;
+                }
+            }
+        
+            .nav-links {
+                display: none;
+            }
+        }
+    }
+}
