@@ -5,7 +5,8 @@ function MyApp() {
         date: "2025年1月17日 (五) ",
         time: "",
         venue: "旺角創興廣場地庫 INCUBASE Arena 新址",
-        imageSource: "chainsaw.jpg"
+        imageSource: "chainsaw.jpg",
+        clicked: false,
     },
     {
         name: "V家鑄台絕唱 II",
@@ -29,7 +30,9 @@ function MyApp() {
         date: "2025年3月28日 (五)",
         time: "12:00 - 19:00",
         venue: "文化廣場",
-        imageSource: "bunkasai.png"
+        imageSource: "bunkasai.png",
+        clicked: true,
+        clickedContent: "話咁快活動原來已經結束咗半個月🤯半個月前嘅日本文化祭......究竟我哋搞咗啲乜？一齊嚟睇下啦！😋"
     },
     {
         name: "聯校電影包場",
@@ -80,6 +83,16 @@ function MyApp() {
         setEventList(tempEventList);
     }
 
+    function displayClickedBackground(index) {
+        let background = document.getElementById("event-clicked-background-"+index);
+        background.classList.add("active");
+    }
+
+    function closeClickedBackground(index) {
+        let background = document.getElementById("event-clicked-background-"+index);
+        background.classList.remove("active");
+    }
+
     return (
         <main>
             <div className="title-container">
@@ -90,9 +103,9 @@ function MyApp() {
                 </div>
             </div>
             {eventList.map((e, i) => 
-                <div className="event-container" key={i}>
-                    <img src={`./assets/img/activities/${e.imageSource}`} />
-                    <div className='event-description'>
+                <div className="event-container" id={`event-container-${i}`} key={i}>
+                    <img src={`./assets/img/activities/thumb/${e.imageSource}`} onClick={()=>displayClickedBackground(i)} />
+                    <div className='event-description' onClick={()=>displayClickedBackground(i)}>
                         <div className='event-title'>{e.name}</div>
                         <div className='event-detail'>
                             {`日期：${e.interval===""? e.date: e.interval}`}<br />
@@ -100,6 +113,17 @@ function MyApp() {
                             {`地點：${e.venue}`}
                         </div>
                     </div>
+                    {e.clicked?
+                        <div className="event-clicked-background" id={`event-clicked-background-${i}`}>
+                            <div className="event-clicked-container" id={`event-clicked-container-${i}`}>
+                                <div className="close-button" onClick={() => closeClickedBackground(i)}></div>
+                                <div className="event-clicked-content">
+                                    {e.clickedContent}
+                                </div>
+                            </div>
+                        </div>
+                        :""
+                    }
                 </div>
             )}
         </main>

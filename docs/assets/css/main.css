@@ -66,55 +66,6 @@
         padding-top: 2rem;
         padding-left: 4rem;
         padding-right: 4rem;
-    
-        #activities-app {
-            .sort-function {
-                font-size: 1.5rem;
-    
-                img {
-                    height: 1.5rem;
-                }
-            }
-    
-            .sort-function:hover {
-                /* change to acs-yellow */
-                filter: invert(85%) sepia(76%) saturate(1704%) hue-rotate(316deg) brightness(102%) contrast(101%);
-            }
-    
-            .event-container {
-                display: flex;
-                padding: 1rem;
-            
-                img {
-                    width: 25%;
-                }
-            
-                &>.event-description {
-                    padding: 2rem;
-                    width: 75%;
-                    background-color: var(--acs-grey);
-            
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    flex-wrap: nowrap;
-            
-                    &>.event-title{
-                        font-size: 2.5rem;
-                        color: var(--acs-purple);
-                    }
-            
-                    &>.event-detail {
-                        font-size: 1.5rem;
-                        color: var(--acs-black);
-                    }
-            
-                    .event-title:hover, .event-title:has(+.event-detail:hover) {
-                        text-decoration: underline;
-                    }
-                }
-            }
-        }
     }
     
     #articles {
