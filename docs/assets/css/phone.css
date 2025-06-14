@@ -6,38 +6,6 @@
 
 #main-wrapper {
     display: block;
-    
-    #nav {
-        width: 100vw;
-        height: 10vh;
-        flex-direction: row;
-
-        #nav-icon-container {
-            width: 20vw;
-
-            display: flex;
-
-            #nav-icon {
-                width: 100%;
-            }
-        }
-
-        #nav-items {
-            width: 60%;
-            flex-direction: row;
-            justify-content: center;
-
-            .nav-item {
-                font-size: 4vw;
-                border-radius: 3px;
-                padding: 5px;
-            }
-        }
-
-        .nav-links {
-            display: none;
-        }
-    }
 }
 
 #main-img {
@@ -56,29 +24,6 @@
     padding-top: 1rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-
-    #activities-app {
-        .sort-function {
-            font-size: 0.5rem;
-
-            img {
-                height: 0.5rem;
-            }
-        }
-        .event-container {
-            display: block;
-            padding: 0;
-            padding-bottom: 0.5rem;
-
-            &>img {
-                width: 90vw;
-            }
-
-            &>.event-description {
-                display: none;
-            }
-        }
-    }
 }
 
 #articles {
